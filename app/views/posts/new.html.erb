@@ -1,0 +1,11 @@
+<h1>NEW</h1>
+
+<p>The route for this (in config/routes.rb) has to be placed ABOVE the route for the show route</p>
+
+eg ('/config/routes.rb') <br><br>
+Rails.application.routes.draw do <br>
+<br>
+    resources :posts, only: :new <br> 
+    resources :posts, only: [:index, :show] <br>
+<br>    
+  end
